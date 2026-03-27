@@ -1,0 +1,143 @@
+{
+  "brokers": [
+    {
+      "name": "Spokeo",
+      "url": "https://www.spokeo.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.spokeo.com/optout",
+      "notes": "Search by email, submit form with listing URL"
+    },
+    {
+      "name": "BeenVerified",
+      "url": "https://www.beenverified.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.beenverified.com/app/optout/search",
+      "notes": "Search by name/email, select record, submit form"
+    },
+    {
+      "name": "Pipl",
+      "url": "https://pipl.com",
+      "removal_type": "email",
+      "dpo_email": "privacy@pipl.com",
+      "notes": "GDPR Article 17 erasure request by email"
+    },
+    {
+      "name": "PeekYou",
+      "url": "https://www.peekyou.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.peekyou.com/about/contact/optout/",
+      "notes": "Submit opt-out form with profile URL"
+    },
+    {
+      "name": "Intelius",
+      "url": "https://www.intelius.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.intelius.com/opt-out",
+      "notes": "Search record then submit suppression form"
+    },
+    {
+      "name": "MyLife",
+      "url": "https://www.mylife.com",
+      "removal_type": "email",
+      "dpo_email": "privacy@mylife.com",
+      "notes": "GDPR erasure request by email; may also accept form"
+    },
+    {
+      "name": "Radaris",
+      "url": "https://radaris.com",
+      "removal_type": "email",
+      "dpo_email": "privacy@radaris.com",
+      "notes": "GDPR Article 17 erasure request by email"
+    },
+    {
+      "name": "FastPeopleSearch",
+      "url": "https://www.fastpeoplesearch.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.fastpeoplesearch.com/removal",
+      "notes": "Find record URL first, then submit removal form"
+    },
+    {
+      "name": "TruePeopleSearch",
+      "url": "https://www.truepeoplesearch.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.truepeoplesearch.com/removal",
+      "notes": "Search by email, submit removal form"
+    },
+    {
+      "name": "Whitepages",
+      "url": "https://www.whitepages.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.whitepages.com/suppression_requests/new",
+      "notes": "Find listing URL first, then submit suppression request"
+    },
+    {
+      "name": "192.com",
+      "url": "https://www.192.com",
+      "removal_type": "email",
+      "dpo_email": "dpo@192.com",
+      "notes": "UK directory; GDPR erasure request by email"
+    },
+    {
+      "name": "Das Örtliche",
+      "url": "https://www.dasoertliche.de",
+      "removal_type": "email",
+      "dpo_email": "datenschutz@dasoertliche.de",
+      "notes": "German directory; GDPR erasure request by email"
+    },
+    {
+      "name": "Gelbe Seiten",
+      "url": "https://www.gelbeseiten.de",
+      "removal_type": "email",
+      "dpo_email": "datenschutz@gelbeseiten.de",
+      "notes": "German yellow pages; GDPR erasure request by email"
+    },
+    {
+      "name": "PagesJaunes",
+      "url": "https://www.pagesjaunes.fr",
+      "removal_type": "email",
+      "dpo_email": "dpo@solocal.com",
+      "notes": "French directory; GDPR erasure request by email"
+    },
+    {
+      "name": "Paginebianche",
+      "url": "https://www.paginebianche.it",
+      "removal_type": "email",
+      "dpo_email": "privacy@seat.it",
+      "notes": "Italian directory; GDPR erasure request by email"
+    },
+    {
+      "name": "Eniro",
+      "url": "https://www.eniro.se",
+      "removal_type": "email",
+      "dpo_email": "privacy@eniro.com",
+      "notes": "Scandinavian directory; GDPR erasure request by email"
+    },
+    {
+      "name": "11880.com",
+      "url": "https://www.11880.com",
+      "removal_type": "email",
+      "dpo_email": "datenschutz@11880.com",
+      "notes": "German directory; GDPR erasure request by email"
+    },
+    {
+      "name": "Google Search",
+      "url": "https://www.google.com",
+      "removal_type": "form",
+      "opt_out_url": "https://reportcontent.google.com/forms/rtbf",
+      "notes": "Right to be forgotten request; submit specific URLs to delist"
+    },
+    {
+      "name": "Bing Search",
+      "url": "https://www.bing.com",
+      "removal_type": "form",
+      "opt_out_url": "https://www.bing.com/webmaster/tools/contentremoval",
+      "notes": "EU content removal request for delisting specific URLs"
+    },
+    {
+      "name": "HaveIBeenPwned",
+      "url": "https://haveibeenpwned.com",
+      "removal_type": "none",
+      "notes": "Read-only breach monitor; no removal possible, use for awareness only"
+    }
+  ]
+}
