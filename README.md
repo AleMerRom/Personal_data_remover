@@ -4,6 +4,8 @@ A tool that automatically sends GDPR Article 17 erasure requests to data brokers
 
 Designed for EU citizens — data brokers are legally required to comply with GDPR erasure requests within 30 days.
 
+> **Note:** The data brokers currently included in `brokers.json` are primarily EU-based or well-known global brokers that operate in Europe. US-only brokers are not the focus of this tool since they are not bound by GDPR.
+
 ---
 
 ## How it works
@@ -185,6 +187,22 @@ python3 tracker.py --summary
 | `needs_action` | Broker replied asking for more information | Automatic (Ollama) / Manual |
 | `needs_review` | Reply is unclear — check your inbox manually | Automatic (Ollama) |
 | `failed` | Broker refused, or email failed to send | Automatic (Ollama) / Manual |
+
+---
+
+## Future work
+
+### Automatic form submission for brokers that don't accept emails
+
+Some brokers (e.g. TruePeopleSearch, Google, Bing) do not accept GDPR erasure requests by email and require you to submit a web form manually. The goal is to automate this using [Playwright](https://playwright.dev/python/), a browser automation library.
+
+Each broker would have its own handler that:
+1. Opens the opt-out page in a headless browser
+2. Fills in the required fields automatically
+3. Submits the form
+4. Updates the tracker
+
+This would eliminate the remaining manual steps and make the tool fully autonomous.
 
 ---
 
