@@ -88,8 +88,18 @@ The tool uses a local LLM to classify broker reply emails. No data is sent to an
 ```bash
 ollama pull mistral
 ```
-3. Ollama runs as a background service on your machine — you do not need to start it manually each time
 
+3. Start Ollama before running the tool:
+```bash
+ollama serve &
+```
+
+4. To stop Ollama when you are done:
+```bash
+killall ollama
+```
+
+> Ollama does not use CPU or memory when idle — it is safe to leave it running in the background.
 > To use a different model, set `OLLAMA_MODEL` in your `.env` file (see next step).
 
 ---
