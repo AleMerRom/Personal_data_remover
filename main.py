@@ -5,6 +5,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 import tracker
+from check_replies import check_replies
 
 BROKERS_FILE = "brokers.json"
 
@@ -103,7 +104,10 @@ def main():
     # Init DB
     tracker.init_db()
 
-    # Load brokers and register any new ones in the tracker
+    # Step 1: check inbox for replies to previously sent requests
+    check_replies()
+
+    # Step 2: load brokers and register any new ones in the tracker
     brokers = load_brokers()
     for broker in brokers:
         tracker.upsert_broker(broker["name"], broker.get("removal_type", "unknown"))

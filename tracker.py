@@ -1,3 +1,4 @@
+import argparse
 import sqlite3
 from datetime import datetime
 
@@ -97,3 +98,26 @@ def print_summary():
             f"{r['completed_at'] or '-'}"
         )
     print()
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Manually update broker request statuses.")
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--summary", action="store_true", help="Print status of all brokers")
+    group.add_argument("--mark-done", metavar="BROKER", help="Mark a broker as done")
+    group.add_argument("--mark-failed", metavar="BROKER", help="Mark a broker as failed")
+    group.add_argument("--mark-action", metavar="BROKER", help="Mark a broker as needs_action")
+    parser.add_argument("note", nargs="?", default=None, help="Optional note to attach")
+    args = parser.parse_args()
+
+    if args.summary:
+        print_summary()
+    elif args.mark_done:
+        set_status(args.mark_done, "done", args.note)
+        print(f"Marked '{args.mark_done}' as done.")
+    elif args.mark_failed:
+        set_status(args.mark_failed, "failed", args.note)
+        print(f"Marked '{args.mark_failed}' as failed.")
+    elif args.mark_action:
+        set_status(args.mark_action, "needs_action", args.note)
+        print(f"Marked '{args.mark_action}' as needs_action.")

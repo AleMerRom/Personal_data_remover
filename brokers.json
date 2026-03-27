@@ -59,9 +59,9 @@
     {
       "name": "TruePeopleSearch",
       "url": "https://www.truepeoplesearch.com",
-      "removal_type": "email",
-      "dpo_email": "support@truepeoplesearch.com",
-      "notes": "GDPR Article 17 erasure request by email"
+      "removal_type": "manual",
+      "opt_out_url": "https://www.truepeoplesearch.com/removal",
+      "notes": "Does not accept email requests — use opt-out form instead"
     },
     {
       "name": "Whitepages",

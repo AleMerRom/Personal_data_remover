@@ -1,4 +1,7 @@
 tracker.db
 .env
+venv/
 __pycache__/
 *.pyc
+credentials.json
+token.json
