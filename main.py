@@ -72,22 +72,19 @@ def send_email(to_address: str, broker_name: str) -> bool:
         return False
 
 
-def handle_form_broker(broker: dict):
-    """Placeholder for Playwright-based form automation."""
-    print(f"  [~] Form-based broker: {broker['name']} — automation not yet implemented.")
-    print(f"      Manual opt-out URL: {broker.get('opt_out_url', 'N/A')}")
-    tracker.set_status(broker["name"], "pending", notes="Awaiting form automation")
-
-
 def process_broker(broker: dict):
     removal_type = broker.get("removal_type", "none")
 
     if removal_type == "none":
         print(f"  [-] {broker['name']} — monitoring only, skipping.")
         tracker.set_status(broker["name"], "done", notes="Monitoring only, no removal needed")
-        return
 
-    if removal_type == "email":
+    elif removal_type == "manual":
+        print(f"  [!] {broker['name']} — requires manual submission.")
+        print(f"      URL: {broker.get('opt_out_url', 'N/A')}")
+        tracker.set_status(broker["name"], "pending", notes="Requires manual submission")
+
+    elif removal_type == "email":
         dpo_email = broker.get("dpo_email")
         if not dpo_email:
             print(f"  [!] {broker['name']} — no DPO email defined, skipping.")
@@ -98,9 +95,6 @@ def process_broker(broker: dict):
             tracker.set_status(broker["name"], "sent")
         else:
             tracker.set_status(broker["name"], "failed", notes="Email send failed")
-
-    elif removal_type == "form":
-        handle_form_broker(broker)
 
 
 def main():

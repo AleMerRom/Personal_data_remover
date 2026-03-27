@@ -3,16 +3,16 @@
     {
       "name": "Spokeo",
       "url": "https://www.spokeo.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.spokeo.com/optout",
-      "notes": "Search by email, submit form with listing URL"
+      "removal_type": "email",
+      "dpo_email": "privacy@spokeo.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "BeenVerified",
       "url": "https://www.beenverified.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.beenverified.com/app/optout/search",
-      "notes": "Search by name/email, select record, submit form"
+      "removal_type": "email",
+      "dpo_email": "privacy@beenverified.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "Pipl",
@@ -24,23 +24,23 @@
     {
       "name": "PeekYou",
       "url": "https://www.peekyou.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.peekyou.com/about/contact/optout/",
-      "notes": "Submit opt-out form with profile URL"
+      "removal_type": "email",
+      "dpo_email": "privacy@peekyou.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "Intelius",
       "url": "https://www.intelius.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.intelius.com/opt-out",
-      "notes": "Search record then submit suppression form"
+      "removal_type": "email",
+      "dpo_email": "privacy@intelius.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "MyLife",
       "url": "https://www.mylife.com",
       "removal_type": "email",
       "dpo_email": "privacy@mylife.com",
-      "notes": "GDPR erasure request by email; may also accept form"
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "Radaris",
@@ -52,23 +52,23 @@
     {
       "name": "FastPeopleSearch",
       "url": "https://www.fastpeoplesearch.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.fastpeoplesearch.com/removal",
-      "notes": "Find record URL first, then submit removal form"
+      "removal_type": "email",
+      "dpo_email": "privacy@fastpeoplesearch.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "TruePeopleSearch",
       "url": "https://www.truepeoplesearch.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.truepeoplesearch.com/removal",
-      "notes": "Search by email, submit removal form"
+      "removal_type": "email",
+      "dpo_email": "support@truepeoplesearch.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "Whitepages",
       "url": "https://www.whitepages.com",
-      "removal_type": "form",
-      "opt_out_url": "https://www.whitepages.com/suppression_requests/new",
-      "notes": "Find listing URL first, then submit suppression request"
+      "removal_type": "email",
+      "dpo_email": "privacy@whitepages.com",
+      "notes": "GDPR Article 17 erasure request by email"
     },
     {
       "name": "192.com",
@@ -122,16 +122,16 @@
     {
       "name": "Google Search",
       "url": "https://www.google.com",
-      "removal_type": "form",
+      "removal_type": "manual",
       "opt_out_url": "https://reportcontent.google.com/forms/rtbf",
-      "notes": "Right to be forgotten request; submit specific URLs to delist"
+      "notes": "Right to be forgotten — requires manual form submission with specific URLs to delist"
     },
     {
       "name": "Bing Search",
       "url": "https://www.bing.com",
-      "removal_type": "form",
+      "removal_type": "manual",
       "opt_out_url": "https://www.bing.com/webmaster/tools/contentremoval",
-      "notes": "EU content removal request for delisting specific URLs"
+      "notes": "EU content removal — requires manual form submission with specific URLs to delist"
     },
     {
       "name": "HaveIBeenPwned",
